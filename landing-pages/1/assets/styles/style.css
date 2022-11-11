@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  aspect-ratio: 1/1;
+}
+
+body {
+  background-color: #cecece;
+  font-family: "Montserrat", sans-serif;
+  background: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  font-weight: 700;
+  font-size: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.body-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  width: 100%;
+  background: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: transparent;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  gap: 2rem;
+}
+
+.logo-container {
+  padding: 0.5rem;
+  width: 33.3333%;
+}
+.logo-container h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: Roboto;
+  color: red;
+}
+
+nav {
+  width: 33.3333%;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.cta {
+  display: flex;
+  justify-content: right;
+  width: 33.3333%;
+}
+.cta button {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 200px;
+  background-color: rgb(69, 69, 236);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 20px rgba(69, 69, 236, 0.5);
+  -webkit-animation: bgflash 1.5s infinite alternate;
+          animation: bgflash 1.5s infinite alternate;
+}
+
+.primary {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.primary h1 {
+  font-size: 5rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+.primary h1 span {
+  color: red;
+}
+.primary p {
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.159rem;
+  font-family: Montserrat;
+  line-height: 2;
+}
+
+.secondary {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+.secondary .input {
+  width: 100%;
+  position: relative;
+}
+.secondary .input input[type=text] {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.secondary .input img {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes bgflash {
+  from {
+    box-shadow: 5px 7px 2px rgba(69, 69, 236, 0.5);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 5px 10px 50px rgba(69, 69, 236, 0.5);
+    transform: scale(1.08);
+  }
+}
+
+@keyframes bgflash {
+  from {
+    box-shadow: 5px 7px 2px rgba(69, 69, 236, 0.5);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 5px 10px 50px rgba(69, 69, 236, 0.5);
+    transform: scale(1.08);
+  }
+}
+main {
+  width: 100%;
+  margin: -2rem auto 8rem auto;
+}
+main .testimonials, main .features {
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+}
+main .testimonials .testimony-heading h1, main .features .testimony-heading h1 {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+main .features {
+  margin-bottom: 10rem;
+}
+main .features h1 {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 2rem;
+}
+main .features .illustration {
+  display: flex;
+  justify-content: baseline;
+  gap: 2rem;
+}
+main .features .illustration p {
+  font-family: "Roboto";
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5;
+}
+main .testimony {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+main article {
+  width: 250px;
+  border-radius: 1rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: normal;
+}
+main article .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+}
+main article .img img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 0.2rem;
+  border: 2px solid blue;
+}
+main article h3 {
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+main article p {
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  width: 100%;
+  margin: 3rem 0;
+}
+footer .social-media {
+  flex-grow: 1;
+}
+footer .quick-links {
+  flex-grow: 1;
+}
+footer .quick-links nav {
+  font-weight: 400;
+  letter-spacing: normal;
+}
+footer .quick-links nav ul {
+  display: block;
+  line-height: 2;
+}
+footer .quick-links nav ul li:hover {
+  text-decoration: underline;
+}
+footer .contact-form {
+  flex-grow: 2;
+}
+footer .contact-form .form-control {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+footer .contact-form .form-control input,
+footer .contact-form .form-control textarea {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+}
+footer button {
+  padding: 1rem 0.5rem;
+  background-color: rgb(183, 15, 15);
+  color: #fff;
+  border: none;
+  width: 50%;
+  border-radius: 0.2rem;
+}
+footer .all-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .all-right span {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

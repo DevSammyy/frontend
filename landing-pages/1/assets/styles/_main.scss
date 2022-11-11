@@ -1,0 +1,82 @@
+main {
+  width: 100%;
+  margin: -2rem auto 8rem auto;
+  .testimonials {
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff;
+    .testimony-heading {
+      h1 {
+        text-align: center;
+        font-family: Roboto;
+        font-size: 3rem;
+        font-weight: 700;
+        padding: 2rem;
+      }
+    }
+  }
+
+  .features {
+    @extend .testimonials;
+    margin-bottom: 10rem;
+    h1 {
+      text-align: center;
+      font-family: Roboto;
+      font-size: 3rem;
+      font-weight: 700;
+      padding: 2rem;
+    }
+    .illustration {
+      display: flex;
+      justify-content: baseline;
+      //   align-items: baseline;
+      gap: 2rem;
+      p {
+        font-family: "Roboto";
+        font-weight: 400;
+        text-align: justify;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .testimony {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  article {
+    width: 250px;
+    border-radius: 1rem;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
+    font-family: sans-serif;
+    font-weight: 400;
+    .img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-block: 1rem;
+      img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        padding: 0.2rem;
+        border: 2px solid blue;
+      }
+    }
+
+    h3 {
+      padding-bottom: 0.5rem;
+      text-align: center;
+    }
+    p {
+      padding: 1rem;
+      line-height: 1.5;
+    }
+    line-height: normal;
+  }
+}

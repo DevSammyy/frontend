@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import "customs";
+
+body {
+  background-color: #cecece;
+  font-family: "Montserrat", sans-serif;
+  background: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+  object-position: center;
+  font-weight: 700;
+  font-size: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+@import "header";
+
+@import "main";
+
+@import "footer";

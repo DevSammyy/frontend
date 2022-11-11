@@ -1,0 +1,65 @@
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem;
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .social-media {
+    flex-grow: 1;
+  }
+  .quick-links {
+    flex-grow: 1;
+    nav {
+      font-weight: 400;
+      letter-spacing: normal;
+      ul {
+        display: block;
+        line-height: 2;
+        li {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    flex-grow: 2;
+    .form-control {
+      width: 100%;
+      margin: 0.5rem 0;
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        border-radius: 0.2rem;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    padding: 1rem 0.5rem;
+    background-color: rgb(183, 15, 15);
+    color: #fff;
+    border: none;
+    width: 50%;
+    border-radius: 0.2rem;
+  }
+
+  .all-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      text-align: center;
+    }
+  }
+}
