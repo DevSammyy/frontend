@@ -35,9 +35,7 @@ body {
 }
 
 .container {
-  overflow: hidden;
   width: 100%;
-  margin: 0 auto;
   height: 100%;
 }
 
@@ -61,7 +59,9 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 100vh;
+  height: 80vh;
+  display: flex;
+  align-items: center;
 }
 
 header {
@@ -76,39 +76,32 @@ header {
           backdrop-filter: blur(5px);
   gap: 2rem;
 }
-
-.logo-container {
+header .logo-container {
   padding: 0.5rem;
   width: 33.3333%;
 }
-.logo-container h1 {
-  font-size: 2rem;
+header .logo-container h1 {
   font-weight: 900;
   font-family: Roboto;
   color: red;
 }
-
-nav {
-  width: 33.3333%;
-}
-nav ul {
+header nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
   list-style: none;
 }
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
   color: #fff;
 }
-
-.cta {
+header .cta {
   display: flex;
   justify-content: right;
   width: 33.3333%;
 }
-.cta button {
+header .cta button {
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -122,17 +115,31 @@ nav ul li a {
   -webkit-animation: bgflash 1.5s infinite alternate;
           animation: bgflash 1.5s infinite alternate;
 }
+@media screen and (max-width: 768px) {
+  header .cta button {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  width: 50px;
+  cursor: pointer;
+}
+.hamburger div {
+  height: 2.5px;
+  background-color: #fff;
+  margin: 0.38em;
+}
 
 .primary {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
 }
 .primary h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   color: #fff;
   margin-top: 2rem;
 }
@@ -142,9 +149,20 @@ nav ul li a {
 .primary p {
   color: #fff;
   text-align: center;
-  letter-spacing: 0.159rem;
   font-family: Montserrat;
+  font-weight: 500;
   line-height: 2;
+}
+@media screen and (max-width: 768px) {
+  .primary h1 {
+    font-size: 48px;
+    text-align: center;
+    line-height: 1;
+  }
+  .primary p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 
 .secondary {
@@ -158,15 +176,15 @@ nav ul li a {
   position: relative;
 }
 .secondary .input input[type=text] {
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   width: 100%;
   font-size: 1.5rem;
 }
 .secondary .input img {
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 4px;
+  right: 0;
   cursor: pointer;
 }
 
@@ -191,9 +209,57 @@ nav ul li a {
     transform: scale(1.08);
   }
 }
+@media screen and (max-width: 768px) {
+  .main-nav {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.951);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    top: 0;
+    height: 100vh;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  .cta {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 45px;
+  }
+  .hamburger div:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  .hamburger div:nth-child(3) {
+    display: none;
+  }
+  .hamburger div:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  .input input[type=text] {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: -999999999;
+  }
+  .input img {
+    z-index: -999999999;
+  }
+}
 main {
   width: 100%;
   margin: -2rem auto 8rem auto;
+  position: relative;
 }
 main .testimonials, main .features {
   width: 100%;
@@ -207,8 +273,46 @@ main .testimonials .testimony-heading h1, main .features .testimony-heading h1 {
   font-weight: 700;
   padding: 2rem;
 }
+main .testimonials .testimony, main .features .testimony {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+main .testimonials .testimony article, main .features .testimony article {
+  width: 250px;
+  border-radius: 1rem;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: normal;
+}
+main .testimonials .testimony article .img, main .features .testimony article .img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-block: 1rem;
+}
+main .testimonials .testimony article .img img, main .features .testimony article .img img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  padding: 0.2rem;
+  border: 2px solid blue;
+}
+main .testimonials .testimony article h3, main .features .testimony article h3 {
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+main .testimonials .testimony article p, main .features .testimony article p {
+  padding: 1rem;
+  line-height: 1.5;
+}
 main .features {
   margin-bottom: 10rem;
+  position: relative;
 }
 main .features h1 {
   text-align: center;
@@ -221,6 +325,16 @@ main .features .illustration {
   display: flex;
   justify-content: baseline;
   gap: 2rem;
+  width: 100%;
+}
+main .features .illustration .img-illustration {
+  width: 100%;
+}
+main .features .illustration .img-illustration img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .features .illustration p {
   font-family: "Roboto";
@@ -228,82 +342,57 @@ main .features .illustration p {
   text-align: justify;
   line-height: 1.5;
 }
-main .testimony {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-main article {
-  width: 250px;
-  border-radius: 1rem;
-  border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
-  font-family: sans-serif;
-  font-weight: 400;
-  line-height: normal;
-}
-main article .img {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-block: 1rem;
-}
-main article .img img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  padding: 0.2rem;
-  border: 2px solid blue;
-}
-main article h3 {
-  padding-bottom: 0.5rem;
-  text-align: center;
-}
-main article p {
-  padding: 1rem;
-  line-height: 1.5;
-}
 
+@media screen and (max-width: 768px) {
+  .testimony {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .illustration {
+    flex-direction: column;
+  }
+}
 footer {
   background-color: #000;
   color: #fff;
   padding: 1.5rem;
+  width: 100%;
 }
 footer .footer-container {
   display: flex;
-  justify-content: space-around;
   gap: 2rem;
   width: 100%;
-  margin: 3rem 0;
+  justify-content: center;
 }
-footer .social-media {
+footer .footer-container .quick-links {
   flex-grow: 1;
 }
-footer .quick-links {
-  flex-grow: 1;
-}
-footer .quick-links nav {
+footer .footer-container .quick-links nav {
   font-weight: 400;
   letter-spacing: normal;
 }
-footer .quick-links nav ul {
+footer .footer-container .quick-links nav ul {
   display: block;
   line-height: 2;
+  list-style: none;
 }
-footer .quick-links nav ul li:hover {
+footer .footer-container .quick-links nav ul li:hover {
   text-decoration: underline;
 }
-footer .contact-form {
-  flex-grow: 2;
+footer .footer-container .quick-links nav ul li a {
+  text-decoration: none;
+  color: #fff;
 }
-footer .contact-form .form-control {
+footer .footer-container .contact-form {
+  flex-grow: 2;
+  margin-bottom: 3rem;
+}
+footer .footer-container .contact-form .form-control {
   width: 100%;
   margin: 0.5rem 0;
 }
-footer .contact-form .form-control input,
-footer .contact-form .form-control textarea {
+footer .footer-container .contact-form .form-control input,
+footer .footer-container .contact-form .form-control textarea {
   width: 100%;
   padding: 1rem 0.5rem;
   border-radius: 0.2rem;
@@ -322,7 +411,14 @@ footer .all-right {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
 }
 footer .all-right span {
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

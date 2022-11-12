@@ -1,6 +1,7 @@
 main {
   width: 100%;
   margin: -2rem auto 8rem auto;
+  position: relative;
   .testimonials {
     width: 100%;
     padding: 2rem;
@@ -14,11 +15,50 @@ main {
         padding: 2rem;
       }
     }
+    .testimony {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      article {
+        width: 250px;
+        border-radius: 1rem;
+        border-radius: 10px;
+        background: #ffffff;
+        box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
+        font-family: sans-serif;
+        font-weight: 400;
+        .img {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding-block: 1rem;
+          img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 0.2rem;
+            border: 2px solid blue;
+          }
+        }
+
+        h3 {
+          padding-bottom: 0.5rem;
+          text-align: center;
+        }
+        p {
+          padding: 1rem;
+          line-height: 1.5;
+        }
+        line-height: normal;
+      }
+    }
   }
 
   .features {
     @extend .testimonials;
     margin-bottom: 10rem;
+    position: relative;
     h1 {
       text-align: center;
       font-family: Roboto;
@@ -31,6 +71,15 @@ main {
       justify-content: baseline;
       //   align-items: baseline;
       gap: 2rem;
+      width: 100%;
+      .img-illustration {
+        width: 100%;
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+        }
+      }
       p {
         font-family: "Roboto";
         font-weight: 400;
@@ -39,44 +88,14 @@ main {
       }
     }
   }
+}
 
+@media screen and (max-width: 768px) {
   .testimony {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
   }
-
-  article {
-    width: 250px;
-    border-radius: 1rem;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 5px 5px 10px #dbdbdb, -5px -5px 10px #ffffff;
-    font-family: sans-serif;
-    font-weight: 400;
-    .img {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding-block: 1rem;
-      img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-        padding: 0.2rem;
-        border: 2px solid blue;
-      }
-    }
-
-    h3 {
-      padding-bottom: 0.5rem;
-      text-align: center;
-    }
-    p {
-      padding: 1rem;
-      line-height: 1.5;
-    }
-    line-height: normal;
+  .illustration {
+    flex-direction: column;
   }
 }

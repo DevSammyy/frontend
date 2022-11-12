@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
   </head>
   <body>
@@ -17,7 +17,7 @@
               <div class="logo-container">
                 <h1>LOGO</h1>
               </div>
-              <nav>
+              <nav class="main-nav">
                 <ul>
                   <li><a href="">Home</a></li>
                   <li><a href="">About</a></li>
@@ -27,6 +27,11 @@
               <div class="cta">
                 <button>Get Started</button>
               </div>
+              <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </header>
             <div class="container">
               <section class="primary">
@@ -34,10 +39,9 @@
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
                   repudiandae illum, magni distinctio quod dolorem temporibus,
-                  libero veniam modi minus voluptas enim atque quibusdam,
-                  veritatis excepturi reiciendis eveniet sit? Necessitatibus!
                 </p>
               </section>
+
               <section class="secondary">
                 <div class="input">
                   <input
@@ -47,7 +51,7 @@
                     placeholder="Search Anything..."
                   />
                   <img
-                    src="../assets/images/853.png"
+                    src="./assets/images/853.png"
                     alt="search"
                     srcset=""
                     style="color: #fff"
@@ -61,11 +65,11 @@
           <section class="features">
             <h1>Features</h1>
             <div class="illustration">
-              <object
-                data="../assets/images/svgs/undraw_detailed_analysis_re_tk6j.svg"
-                width="500"
-                height="500"
-              ></object>
+              <div class="img-illustration">
+                <img
+                  src="./assets/images/svgs/undraw_detailed_analysis_re_tk6j.svg"
+                />
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequatur sunt beatae neque a, tenetur modi nobis ullam aut
@@ -74,29 +78,6 @@
                 rerum deleniti assumenda unde vitae dolore debitis illum
                 possimus aperiam iste earum temporibus ratione, dolores
                 distinctio. Itaque consequuntur nostrum ipsa aspernatur unde
-                dolores magni ad minima. Deserunt explicabo sed optio eum,
-                doloribus aspernatur! Voluptate unde iste ipsam ad omnis placeat
-                ipsa doloribus adipisci quibusdam et animi, pariatur molestiae
-                consequatur tempore ex labore autem odio in delectus? Lorem
-                ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                fugiat et tempore atque facere inventore molestiae? Similique
-                sunt quas blanditiis modi optio a maiores illo, beatae id
-                dolorem fugiat magni. Quod nisi magnam nemo adipisci perferendis
-                voluptates eaque architecto, consequatur illum, cupiditate porro
-                harum aliquid tempore iusto provident fugiat distinctio
-                reiciendis molestias commodi. Sed modi amet error qui, nulla
-                voluptatum. Non, iure fugiat? Praesentium numquam deserunt quam
-                omnis soluta? Voluptatem ad ullam fuga deleniti, minima
-                voluptatibus omnis veniam fugit similique, vitae accusantium et
-                in tempora corporis ab consequatur ipsam! Ad! Quaerat velit
-                soluta aliquam, vitae quas hic, dignissimos quibusdam amet
-                consectetur inventore atque! Suscipit omnis numquam ad eaque
-                deleniti mollitia tempore qui maiores ullam, ex sequi dolorum
-                laudantium, laboriosam tenetur! Ipsum minus sint ut, itaque
-                voluptatibus laudantium id modi temporibus quod? Cum magnam
-                nihil at delectus, cumque iste sapiente iure sint explicabo
-                repudiandae temporibus distinctio necessitatibus impedit ipsam.
-                Fuga, vero.
               </p>
             </div>
           </section>
@@ -108,7 +89,7 @@
             <div class="testimony">
               <article>
                 <div class="img">
-                  <img src="../assets/images/1.jpg" alt="" />
+                  <img src="./assets/images/1.jpg" alt="" />
                 </div>
                 <h3>Babatunde</h3>
                 <p>
@@ -118,7 +99,7 @@
               </article>
               <article>
                 <div class="img">
-                  <img src="../assets/images/2.jpg" alt="" />
+                  <img src="./assets/images/2.jpg" alt="" />
                 </div>
                 <h3>Joshua</h3>
                 <p>
@@ -128,7 +109,7 @@
               </article>
               <article>
                 <div class="img">
-                  <img src="../assets/images/bg.jpg" alt="" />
+                  <img src="./assets/images/bg.jpg" alt="" />
                 </div>
                 <h3>Ezekiel</h3>
                 <p>
@@ -138,7 +119,7 @@
               </article>
               <article>
                 <div class="img">
-                  <img src="../assets/images/1.jpg" alt="" />
+                  <img src="./assets/images/1.jpg" alt="" />
                 </div>
                 <h3>Mary</h3>
                 <p>
@@ -180,6 +161,7 @@
               <p>Twitter</p>
             </div>
           </section>
+
           <section class="contact-form">
             <form action="">
               <div class="form-control">
